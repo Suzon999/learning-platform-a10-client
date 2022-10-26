@@ -17,7 +17,7 @@ const Navbar = () => {
 
     return (
         <>
-            <div className="navbar bg-slate-700 lg:px-10">
+            <div className="navbar bg-blue-500 lg:px-10">
                 {/* -------------navbar start------------ */}
                 <div className="navbar-start ">
                     {/* ---------logo show lg:--------- */}
@@ -64,9 +64,9 @@ const Navbar = () => {
                             <label htmlFor="Toggle1" className="inline-flex ml-5 items-center space-x-4 cursor-pointer dark:text-gray-100">
                                 <span className='text-1xl text-white text-bold'>Light</span>
                                 <span className="relative">
-                                    <input id="Toggle1" type="checkbox" className="hidden peer" />
-                                    <div className="w-10 h-6 rounded-full shadow-inner dark:bg-gray-400 peer-checked:dark:bg-violet-400"></div>
-                                    <div className="absolute inset-y-0 left-0 w-4 h-4 m-1 rounded-full shadow peer-checked:right-0 peer-checked:left-auto dark:bg-gray-800"></div>
+                                    <input id="Toggle1" type="checkbox" className="hidden peer " />
+                                    <div className="w-10 h-6 rounded-full shadow-inner dark:bg-gray-200 peer-checked:dark:bg-violet-400"></div>
+                                    <div className="absolute inset-y-0 left-0 w-4 h-4 m-1 rounded-full shadow peer-checked:right-0 peer-checked:left-auto dark:bg-gray-200"></div>
                                 </span>
                                 <span className='text-white'>Dark</span>
                             </label>
