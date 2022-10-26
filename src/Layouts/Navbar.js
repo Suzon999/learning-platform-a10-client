@@ -8,11 +8,11 @@ const Navbar = () => {
     const { user, logOutPart } = useContext(AuthContext)
     console.log(user);
 
-    const LogoutBtn = () =>{
+    const LogoutBtn = () => {
         logOutPart()
-        .then(result =>{
+            .then(result => {
 
-        }).catch(error => console.log(error))
+            }).catch(error => console.log(error))
     }
 
     return (
@@ -26,7 +26,7 @@ const Navbar = () => {
                             <Link to='/' className=" normal-case text-xl lg:w-20">
                                 <img className='w-full' src={Logo} alt="" />
                             </Link>
-                            <Link to='/' className='flex items-center font-bold text-2xl text-amber-500'>Learning<span className='text-white'>Bd</span></Link>
+                            <Link to='/' className='flex items-center font-bold text-2xl text-amber-500 mx-4'>Web<span className='text-white'>Technology</span></Link>
                         </div>
                     </div>
                     {/* ------ toggle droup down -------------- */}
@@ -71,24 +71,24 @@ const Navbar = () => {
                                 <span className='text-white'>Dark</span>
                             </label>
 
-                           
+
 
                         </ul>
                     </div>
                     <ul className="lg-header menu menu-horizontal p-0">
-                    {
-                        user?.uid ?
-                            <Link to='/' onClick={LogoutBtn} id='logout' className='btn mx-4'>Log out</Link>
-                            :
-                            <>
-                                <Link to='/registration' className='btn ml-3 mr-2 lg:mx-5'>Registrar</Link>
+                        {
+                            user?.uid ?
+                                <Link to='/' onClick={LogoutBtn} id='logout' className='btn mx-4'>Log out</Link>
+                                :
+                                <>
+                                    <Link to='/registration' className='btn ml-3 mr-2 lg:mx-5'>Registrar</Link>
                                     <Link to='/login' className='btn mr-3'>Login</Link>
-                            </>
-                    }
+                                </>
+                        }
                     </ul>
 
                     {/* ----------you profile start----------- */}
-                   
+
                     <div id='avatar' className="avatar online placeholder mr-2 dropdown dropdown-end">
                         <div tabIndex={0} className="w-7 rounded-full ring ring-primary
                          ring-offset-base-100 ring-offset-2">
@@ -100,16 +100,16 @@ const Navbar = () => {
                                     <img className='w-6 bg-slate-300' src="https://placeimg.com/192/192/people" />
                             }
                         </div>
-                        
+
                         <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-64 mt-5 ">
                             <div className="flex flex-col justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-900 dark:text-gray-100">
-                                {user?.uid ? <img src={user?.photoURL} alt="" className="w-10 h-6 mx-auto rounded-full dark:bg-gray-500 aspect-square" /> : <p className='text-center text-amber-500'>Log in N ow</p>}     
+                                {user?.uid ? <img src={user?.photoURL} alt="" className="w-10 h-6 mx-auto rounded-full dark:bg-gray-500 aspect-square" /> : <p className='text-center text-amber-500'>Log in N ow</p>}
                                 <div className="space-y-4 text-center divide-y divide-gray-700">
                                     <div className="my-2 space-y-1">
                                         <h2 className="text-xl font-semibold sm:text-2xl">{user?.displayName}</h2>
                                         <p className="px-5 text-xs sm:text-base dark:text-gray-400">{user?.email}</p>
                                         <p className="px-5 text-xs sm:text-base dark:text-gray-400">Last Sing in : {user?.metadata?.lastSignInTime}</p>
-                                       
+
                                     </div>
                                     <div className="flex justify-center pt-2 space-x-4 align-center">
                                         <a rel="noopener noreferrer" href="#" aria-label="GitHub" className="p-2 rounded-md dark:text-gray-100 hover:dark:text-violet-400">
